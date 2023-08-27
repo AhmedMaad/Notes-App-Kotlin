@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Notes App Kotlin</string>
+    <string name="open_add_note_page">Open add note page</string>
+    <string name="details">Details</string>
+    <string name="save">Save</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
 </resources>
