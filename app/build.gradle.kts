@@ -7,6 +7,10 @@ android {
     namespace = "com.example.android.notesappkotlin"
     compileSdk = 33
 
+    buildFeatures{
+        viewBinding = true
+    }
+    
     defaultConfig {
         applicationId = "com.example.android.notesappkotlin"
         minSdk = 21
