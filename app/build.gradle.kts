@@ -50,8 +50,12 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation("androidx.room:room-runtime:2.5.2")
-    //The Room annotation processor generates the code that actually implements the database, so it is essential for using Room.
+    //Room + Coroutines support for Room
+    implementation ("androidx.room:room-ktx:2.5.2")
+    //The Room annotation processor generates the code that actually implements the database,
+    //so it is essential for using Room.
     kapt("androidx.room:room-compiler:2.5.2")
 
+    //Coroutines support for view model
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
 }
