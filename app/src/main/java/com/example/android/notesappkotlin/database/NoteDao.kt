@@ -1,5 +1,6 @@
 package com.example.android.notesappkotlin.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -22,11 +23,13 @@ interface NoteDao {
     * Enabling you to write cleaner and more concise app code.
     * */
 
+    //Suspend allows a function to run asynchronous operations within a coroutine.
     @Insert
     suspend fun insertNote(note: Note)
 
+    //LiveData already has built-in support for asynchronous operations, so no need to add "suspend".
     @Query("SELECT * FROM note")
-    suspend fun getAllNotes(): List<Note>
+    fun getAllNotes(): LiveData<List<Note>>
 
     @Update
     suspend fun updateNote(note: Note)
