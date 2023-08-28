@@ -2,6 +2,8 @@ package com.example.android.notesappkotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.android.notesappkotlin.database.DBHelper
+import com.example.android.notesappkotlin.database.Note
 import com.example.android.notesappkotlin.databinding.ActivityNoteBinding
 
 class NoteActivity : AppCompatActivity() {
