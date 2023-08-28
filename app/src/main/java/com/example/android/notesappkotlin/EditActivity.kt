@@ -23,7 +23,10 @@ class EditActivity : AppCompatActivity() {
 
         binding.detailsEt.setText(note.noteDetails)
 
-        binding.deleteBtn.setOnClickListener { }
+        binding.deleteBtn.setOnClickListener {
+            viewModel.deleteNote(note)
+            Toast.makeText(this, R.string.deleted, Toast.LENGTH_SHORT).show()
+        }
 
         binding.updateBtn.setOnClickListener {
             val updatedDetails = binding.detailsEt.text.toString()
