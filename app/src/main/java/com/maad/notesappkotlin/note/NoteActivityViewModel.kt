@@ -1,10 +1,10 @@
-package com.example.android.notesappkotlin.note
+package com.maad.notesappkotlin.note
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.android.notesappkotlin.database.DBHelper
-import com.example.android.notesappkotlin.database.Note
+import com.maad.notesappkotlin.database.DBHelper
+import com.maad.notesappkotlin.database.Note
 import kotlinx.coroutines.launch
 
 class NoteActivityViewModel(app: Application) : AndroidViewModel(app) {

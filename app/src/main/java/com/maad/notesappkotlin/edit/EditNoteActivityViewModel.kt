@@ -1,13 +1,13 @@
-package com.example.android.notesappkotlin.edit
+package com.maad.notesappkotlin.edit
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.android.notesappkotlin.database.DBHelper
-import com.example.android.notesappkotlin.database.Note
+import com.maad.notesappkotlin.database.DBHelper
+import com.maad.notesappkotlin.database.Note
 import kotlinx.coroutines.launch
 
-class EditActivityViewModel(app: Application) : AndroidViewModel(app) {
+class EditNoteActivityViewModel(app: Application) : AndroidViewModel(app) {
 
     private val db: DBHelper
 

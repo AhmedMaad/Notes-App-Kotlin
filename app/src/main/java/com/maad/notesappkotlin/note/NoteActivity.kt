@@ -1,12 +1,12 @@
-package com.example.android.notesappkotlin.note
+package com.maad.notesappkotlin.note
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.android.notesappkotlin.R
-import com.example.android.notesappkotlin.database.Note
-import com.example.android.notesappkotlin.databinding.ActivityNoteBinding
+import com.maad.notesappkotlin.database.Note
+import com.maad.notesappkotlin.R
+import com.maad.notesappkotlin.databinding.ActivityNoteBinding
 
 class NoteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

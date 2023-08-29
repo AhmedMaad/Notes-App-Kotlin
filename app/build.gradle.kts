@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.android.notesappkotlin"
+    namespace = "com.maad.notesappkotlin"
     compileSdk = 33
 
     buildFeatures {
@@ -14,7 +14,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.android.notesappkotlin"
+        applicationId = "com.maad.notesappkotlin"
         minSdk = 21
         targetSdk = 33
         versionCode = 1

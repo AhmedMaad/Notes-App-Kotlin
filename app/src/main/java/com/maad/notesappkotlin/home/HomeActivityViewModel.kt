@@ -1,10 +1,10 @@
-package com.example.android.notesappkotlin.home
+package com.maad.notesappkotlin.home
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.example.android.notesappkotlin.database.DBHelper
-import com.example.android.notesappkotlin.database.Note
+import com.maad.notesappkotlin.database.DBHelper
+import com.maad.notesappkotlin.database.Note
 
 class HomeActivityViewModel(app: Application) : AndroidViewModel(app) {
 

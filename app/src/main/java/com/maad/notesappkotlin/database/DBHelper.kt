@@ -1,4 +1,4 @@
-package com.example.android.notesappkotlin.database
+package com.maad.notesappkotlin.database
 
 import android.content.Context
 import androidx.room.Database
