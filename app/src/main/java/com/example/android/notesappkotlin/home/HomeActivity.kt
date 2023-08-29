@@ -1,12 +1,14 @@
-package com.example.android.notesappkotlin
+package com.example.android.notesappkotlin.home
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
+import com.example.android.notesappkotlin.note.NoteActivity
 import com.example.android.notesappkotlin.database.Note
 import com.example.android.notesappkotlin.databinding.ActivityHomeBinding
+import com.example.android.notesappkotlin.edit.EditActivity
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
         val binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val viewModel = ViewModelProvider(this)[NoteViewModel::class.java]
+        val viewModel = ViewModelProvider(this)[HomeActivityViewModel::class.java]
 
         binding.addFab.setOnClickListener {
             startActivity(Intent(this, NoteActivity::class.java))

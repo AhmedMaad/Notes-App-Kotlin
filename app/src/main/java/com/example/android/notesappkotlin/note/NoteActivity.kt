@@ -1,9 +1,10 @@
-package com.example.android.notesappkotlin
+package com.example.android.notesappkotlin.note
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.example.android.notesappkotlin.R
 import com.example.android.notesappkotlin.database.Note
 import com.example.android.notesappkotlin.databinding.ActivityNoteBinding
 
@@ -13,7 +14,7 @@ class NoteActivity : AppCompatActivity() {
         val binding = ActivityNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val viewModel = ViewModelProvider(this)[NoteViewModel::class.java]
+        val viewModel = ViewModelProvider(this)[NoteActivityViewModel::class.java]
 
         binding.saveBtn.setOnClickListener {
             val details = binding.detailsEt.text.toString()
