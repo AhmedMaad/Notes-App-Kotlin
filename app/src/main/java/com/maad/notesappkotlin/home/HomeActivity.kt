@@ -21,22 +21,11 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, NoteActivity::class.java))
         }
 
-        var notes = arrayListOf<Note>()
-
         viewModel.allNotes.observe(this) {
-            notes = it as ArrayList<Note>
-            val detailsList = arrayListOf<String>()
-            for (note in it)
-                detailsList.add(note.noteDetails)
-            val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, detailsList)
-            //binding.notesList.adapter = adapter
+            val notes = it as ArrayList<Note>
+            val adapter = NoteAdapter(this, notes)
+            binding.notesList.adapter = adapter
         }
-
-        /*binding.notesList.setOnItemClickListener { parent, view, position, id ->
-            val i = Intent(this, EditNoteActivity::class.java)
-            i.putExtra("note", notes[position])
-            startActivity(i)
-        }*/
 
     }
 
