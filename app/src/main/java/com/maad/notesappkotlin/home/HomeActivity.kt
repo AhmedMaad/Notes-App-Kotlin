@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.maad.notesappkotlin.note.NoteActivity
 import com.maad.notesappkotlin.database.Note
 import com.maad.notesappkotlin.databinding.ActivityHomeBinding
+import com.maad.notesappkotlin.edit.EditNoteActivity
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,11 @@ class HomeActivity : AppCompatActivity() {
 
         viewModel.allNotes.observe(this) {
             val notes = it as ArrayList<Note>
-            val adapter = NoteAdapter(this, notes)
+            val adapter = NoteAdapter(notes) { position ->
+                val i = Intent(this, EditNoteActivity::class.java)
+                i.putExtra("note", notes[position])
+                startActivity(i)
+            }
             binding.notesList.adapter = adapter
         }
 
