@@ -3,8 +3,8 @@ package com.maad.notesappkotlin.home
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import androidx.lifecycle.ViewModelProvider
+import com.maad.notesappkotlin.Constants.NOTE
 import com.maad.notesappkotlin.note.NoteActivity
 import com.maad.notesappkotlin.database.Note
 import com.maad.notesappkotlin.databinding.ActivityHomeBinding
@@ -26,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
             val notes = it as ArrayList<Note>
             val adapter = NoteAdapter(notes) { position ->
                 val i = Intent(this, EditNoteActivity::class.java)
-                i.putExtra("note", notes[position])
+                i.putExtra(NOTE, notes[position])
                 startActivity(i)
             }
             binding.notesList.adapter = adapter

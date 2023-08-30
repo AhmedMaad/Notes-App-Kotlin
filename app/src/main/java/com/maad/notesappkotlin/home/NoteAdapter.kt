@@ -1,6 +1,5 @@
 package com.maad.notesappkotlin.home
 
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter

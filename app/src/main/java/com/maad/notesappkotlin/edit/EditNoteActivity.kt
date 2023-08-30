@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.maad.notesappkotlin.Constants.NOTE
 import com.maad.notesappkotlin.database.Note
 import com.maad.notesappkotlin.R
 import com.maad.notesappkotlin.databinding.ActivityEditBinding
@@ -18,9 +19,9 @@ class EditNoteActivity : AppCompatActivity() {
         val viewModel = ViewModelProvider(this)[EditNoteActivityViewModel::class.java]
 
         val note = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
-            intent.getParcelableExtra("note", Note::class.java)!!
+            intent.getParcelableExtra(NOTE, Note::class.java)!!
         else
-            intent.getParcelableExtra("note")!!
+            intent.getParcelableExtra(NOTE)!!
 
         binding.detailsEt.setText(note.noteDetails)
 
