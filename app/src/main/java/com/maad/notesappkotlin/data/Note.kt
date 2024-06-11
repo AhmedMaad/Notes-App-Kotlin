@@ -1,4 +1,4 @@
-package com.maad.notesappkotlin.database
+package com.maad.notesappkotlin.data
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo

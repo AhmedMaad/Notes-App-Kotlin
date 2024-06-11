@@ -1,10 +1,10 @@
-package com.maad.notesappkotlin.home
+package com.maad.notesappkotlin.ui.note.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.maad.notesappkotlin.database.Note
+import com.maad.notesappkotlin.data.Note
 import com.maad.notesappkotlin.databinding.NoteListItemBinding
 
 class NoteAdapter(

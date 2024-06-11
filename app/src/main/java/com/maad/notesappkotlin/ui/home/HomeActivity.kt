@@ -1,14 +1,14 @@
-package com.maad.notesappkotlin.home
+package com.maad.notesappkotlin.ui.note.home
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.maad.notesappkotlin.Constants.NOTE
-import com.maad.notesappkotlin.note.NoteActivity
-import com.maad.notesappkotlin.database.Note
+import com.maad.notesappkotlin.ui.note.NoteActivity
+import com.maad.notesappkotlin.data.Note
 import com.maad.notesappkotlin.databinding.ActivityHomeBinding
-import com.maad.notesappkotlin.edit.EditNoteActivity
+import com.maad.notesappkotlin.ui.note.edit.EditNoteActivity
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

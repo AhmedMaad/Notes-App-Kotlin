@@ -1,10 +1,10 @@
-package com.maad.notesappkotlin.note
+package com.maad.notesappkotlin.ui.note
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.maad.notesappkotlin.database.Note
+import com.maad.notesappkotlin.data.Note
 import com.maad.notesappkotlin.R
 import com.maad.notesappkotlin.databinding.ActivityNoteBinding
 

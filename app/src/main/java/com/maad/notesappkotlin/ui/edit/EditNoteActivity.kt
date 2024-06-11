@@ -1,4 +1,4 @@
-package com.maad.notesappkotlin.edit
+package com.maad.notesappkotlin.ui.note.edit
 
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.maad.notesappkotlin.Constants.NOTE
-import com.maad.notesappkotlin.database.Note
+import com.maad.notesappkotlin.data.Note
 import com.maad.notesappkotlin.R
 import com.maad.notesappkotlin.databinding.ActivityEditBinding
 

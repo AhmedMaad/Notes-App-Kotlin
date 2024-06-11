@@ -6,7 +6,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.maad.notesappkotlin.database.Note
+import com.maad.notesappkotlin.data.Note
 
 @Dao
 interface NoteDao {
@@ -37,5 +37,8 @@ interface NoteDao {
 
     @Delete
     suspend fun deleteNote(note: Note)
+
+    @Query("SELECT * FROM note WHERE id == :id")
+    fun getAllNotes(id: Int): LiveData<List<Note>>
 
 }

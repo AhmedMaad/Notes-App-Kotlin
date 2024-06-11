@@ -1,18 +1,18 @@
-package com.maad.notesappkotlin.note
+package com.maad.notesappkotlin.ui.note
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.maad.notesappkotlin.database.DBHelper
-import com.maad.notesappkotlin.database.Note
+import com.maad.notesappkotlin.database.RoomDBHelper
+import com.maad.notesappkotlin.data.Note
 import kotlinx.coroutines.launch
 
 class NoteActivityViewModel(app: Application) : AndroidViewModel(app) {
 
-    private val db: DBHelper
+    private val db: RoomDBHelper
 
     init {
-        db = DBHelper.getDBInstance(app)
+        db = RoomDBHelper.getDBInstance(app)
     }
 
     fun saveNote(note: Note) {

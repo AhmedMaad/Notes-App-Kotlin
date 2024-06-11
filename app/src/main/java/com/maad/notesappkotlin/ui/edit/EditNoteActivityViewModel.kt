@@ -1,18 +1,18 @@
-package com.maad.notesappkotlin.edit
+package com.maad.notesappkotlin.ui.note.edit
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.maad.notesappkotlin.database.DBHelper
-import com.maad.notesappkotlin.database.Note
+import com.maad.notesappkotlin.database.RoomDBHelper
+import com.maad.notesappkotlin.data.Note
 import kotlinx.coroutines.launch
 
 class EditNoteActivityViewModel(app: Application) : AndroidViewModel(app) {
 
-    private val db: DBHelper
+    private val db: RoomDBHelper
 
     init {
-        db = DBHelper.getDBInstance(app)
+        db = RoomDBHelper.getDBInstance(app)
     }
 
     fun updateNote(note: Note){
